@@ -1,0 +1,49 @@
+int a,b, sonuc=0;
+            byte c,d;
+            tekrar:
+            Console.Write("1. sayıyı giriniz: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("2. sayıyı giriniz: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("işlem giriniz: ");
+            Console.WriteLine("+ için 1 ");
+            Console.WriteLine("- için 2 ");
+            Console.WriteLine("* için 3 ");
+            Console.WriteLine("/ için 4 ");
+            Console.Write("işleminiz: ");
+            c = Convert.ToByte(Console.ReadLine());
+            switch(c)
+            {
+                case 1:
+                    sonuc = a + b;
+                    break;
+                case 2:
+                    sonuc = a - b;
+                    break;
+                case 3:
+                    sonuc = a * b;
+                    break;
+                case 4:
+                    sonuc = a / b;
+                    break;
+            }
+            Console.Write("İşleminizin sonucu :");
+            Console.WriteLine(sonuc);
+            tekrar1:
+            Console.Write("devam etmek istiyorsanız 1'i istemiyorsanız 2'ye basınız ?");
+            d = Convert.ToByte(Console.ReadLine());
+            if (d == 1)
+            {
+                goto tekrar;
+            }
+            else if (d == 2)
+            {
+                Console.Write("SON");
+            }
+            else
+            {
+                Console.WriteLine("girdiğiniz değer 1 veya 2 değil lütfen tekrar deneyiniz");
+                goto tekrar1;
+            }
+
+            Console.ReadKey();
